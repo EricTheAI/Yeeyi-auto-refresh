@@ -35,8 +35,8 @@ def auto_refresh(url):
         browser.quit()
         print("退出浏览器")
 
-
-browser = webdriver.Chrome(executable_path="/Users/zhangjiawei/Downloads/chromedriver")
+# need to download the driver first
+browser = webdriver.Chrome(executable_path="/usr/local/bin/chromedriver")
 t = datetime.datetime.now().timetuple()    # get current time
 
 while True:    
