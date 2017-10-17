@@ -9,9 +9,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 USERNAME = ''
 PASSWORD = ''
+URL = ''
 
 def auto_refresh(url):
     browser.get(url)
@@ -30,7 +30,7 @@ def auto_refresh(url):
         )
         browser.find_element_by_xpath("/html/body[@id='nv_forum']/div[@id='wp']/div[@id='ct']/div[@id='postlist']/div[@id='post_27072678']/table[@id='pid27072678']/tbody/tr[1]/td[@class='plc']/div[@class='pi']/div[@class='pti']/div[@class='authi']/a[@id='k_refresh']/i").click()  # Click the 提升帖子 button
         print("成功提升!")
-        time.sleep(3)    # 观察是否成功
+        time.sleep(3)    # to observe whether succeeded or not
     finally:
         browser.quit()
         print("退出浏览器")
@@ -41,7 +41,7 @@ t = datetime.datetime.now().timetuple()    # get current time
 
 while True:    
     if (8 <= t[3] <= 24) or (t[3] == 0):    # choose better time
-        auto_refresh("http://www.yeeyi.com/bbs/thread-3919678-1-1.html")
+        auto_refresh(URL)
         print(datetime.datetime.now())
         time.sleep(3600)
         t = datetime.datetime.now().timetuple()
