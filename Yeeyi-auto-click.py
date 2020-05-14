@@ -9,9 +9,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-USERNAME = ''
+
+USERNAME = 'CrazyEric1994'
 PASSWORD = ''
-URL = ''
+URL = 'http://www.yeeyi.com/bbs/thread-4484425-1-1.html'
 
 def auto_refresh(url):
     browser.get(url)
